@@ -8,14 +8,14 @@ import EventCard from './components/EventCard.vue'
     <header>
       <div class="wrapper">
         <nav>
-          <RouterLink to="/">Events</RouterLink> |
-          <RouterLink to="/about">About</RouterLink>
+          <RouterLink :to="{ name: 'event-list' }">Events</RouterLink> |
+          <RouterLink :to="{ name: 'about' }">About</RouterLink>
         </nav>
       </div>
     </header>
-  </div>
 
-  <RouterView />
+    <RouterView />
+  </div>
 </template>
 
 <style>
@@ -25,6 +25,10 @@ import EventCard from './components/EventCard.vue'
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 nav {
   padding: 30px;
